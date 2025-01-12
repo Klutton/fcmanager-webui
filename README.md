@@ -1,33 +1,66 @@
-# fcmanager-webui
+# FCManager Web UI
 
-This template should help get you started developing with Vue 3 in Vite.
+FCManager 是一个基于 Vue 3 + TypeScript 的前端管理系统。
 
-## Recommended IDE Setup
+## 技术栈
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3
+- TypeScript
+- Vue Router
+- Axios
+- Vite
 
-## Type Support for `.vue` Imports in TS
+## 功能特性
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- 🔐 用户认证（登录/注册）
+- 👤 个人资料管理
+- 📋 任务管理系统
+- 🎨 现代化 UI 设计
+- 🌙 暗色主题
 
-## Customize configuration
+## 开发环境要求
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Node.js >= 16
+- npm >= 7
 
-## Project Setup
+## 快速开始
 
-```sh
+1. 克隆项目
+
+```bash
+git clone https://github.com/你的用户名/fcmanager-webui.git
+cd fcmanager-webui
+```
+
+2. 安装依赖
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+3. 启动开发服务器
+```bash
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+4. 构建生产版本
+```bash
 npm run build
 ```
+
+## 项目结构
+```
+fcmanager-webui/
+├── src/
+│ ├── components/ # 通用组件
+│ ├── views/ # 页面组件
+│ ├── services/ # API 服务
+│ ├── router/ # 路由配置
+│ └── utils/ # 工具函数
+├── public/ # 静态资源
+└── index.html # 入口 HTML
+```
+
+
+## API 配置
+
+默认 API 地址为 `http://127.0.0.1:5000/`。如需修改，请在 `src/services/api.ts` 中更新 `baseURL`。
