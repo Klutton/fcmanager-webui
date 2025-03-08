@@ -30,8 +30,11 @@ const handleMenuClick = (key: string) => {
 
 <template>
   <div class="side-menu">
-    <div :class="['user-info', { 'admin-rainbow': isAdmin }]">
-      {{ username }}
+    <div 
+      class="main-title"
+      @click="$router.push('/')"
+    >
+      FCM
     </div>
     
     <div 
@@ -42,30 +45,52 @@ const handleMenuClick = (key: string) => {
     >
       {{ item.label }}
     </div>
+
+    <div :class="['user-info', { 'admin-rainbow': isAdmin }]">
+      {{ username }}
+    </div>
   </div>
 </template>
 
 <style scoped>
 .side-menu {
-  width: 180px;
+  width: 130px;
   background: rgba(26, 26, 26, 0.8);
   height: 100vh;
-  padding: 20px 0;
+  padding: 15px 0;
   position: fixed;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 0 13px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transform-origin: center;
 }
 
 .user-info {
-  padding: 0 24px 20px;
+  padding: 10px 5px 0 10px;
   color: #ffffff;
   font-size: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+  margin-bottom: 0;
+  word-break: break-all;
 }
 
 .menu-item {
-  padding: 15px 24px;
+  padding: 15px 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -105,9 +130,9 @@ const handleMenuClick = (key: string) => {
   animation: rainbow 4s linear infinite;
   font-weight: 800;
   text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.3),
-    0 0 30px rgba(255, 255, 255, 0.2);
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 30px currentColor;
   position: relative;
 }
 
@@ -128,5 +153,9 @@ const handleMenuClick = (key: string) => {
   0% { background-position: 0% 50%; }
   50% { background-position: 150% 50%; }
   100% { background-position: 300% 50%; }
+}
+
+.main-title:hover {
+  color: #4CAF50;
 }
 </style>

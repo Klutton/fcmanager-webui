@@ -19,7 +19,6 @@ import WelcomeItem from './WelcomeItem.vue'
   gap: 1.5rem;
   justify-content: center;
   margin-top: 2rem;
-  width: 100%;
 }
 
 .btn {
@@ -55,5 +54,20 @@ import WelcomeItem from './WelcomeItem.vue'
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-heading);
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-align: center;
+  width: 100%;
 }
 </style>
